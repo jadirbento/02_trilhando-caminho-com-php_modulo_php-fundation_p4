@@ -1,0 +1,40 @@
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="home"><a href="">Home</a></li>
+        <li><a href="">Admin</a></li>
+        <li>Dashboard</li>
+    </ul>
+</div>
+<!-- /breadcrumbs -->
+
+
+<h1>Dashboard</h1>
+<div class="box-cols">
+    <div class="box box-col">
+        <div class="headlines">
+            <h2><span>P&aacute;ginas</span></h2>
+        </div>
+        <div class="box-content">
+            <?php foreach($_POST['paginas'] as $page){ ?>
+                <h3> <?php echo $page['titulo']; ?> </h3>
+                <p> <?php echo $page['criado']; ?> </p>
+            <?php } ?>
+            <a href="/admin/pagias/cadastar" class="btn-default"><span>Criar Nova</span></a>
+        </div>
+    </div>
+
+    <div class="box box-col box-last">
+        <div class="headlines">
+            <h2><span>Usu&aacute;rios</span></h2>
+        </div>
+        <div class="box-content">
+            <?php foreach($_POST['usuarios'] as $user){ ?>
+                <h3> <?php echo $user['nome']; ?> </h3>
+                <p> <?php echo $user['email']; ?> </p>
+            <?php } ?>
+
+            <a href="/admin/usuarios/cadastrar" class="btn-default"><span>Novo Usu&aacute;rio</span></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="home"><a href="/admin/">Admin</a></li>
+        <li><a href="/admin/usuarios/index/">Usu&aacute;rio</a></li>
+        <li>Detalhes</li>
+    </ul>
+</div>
+<!-- /breadcrumbs -->
+
+
+
+<?php
+    #print_r($_POST['usuario']);
+    $dadosUser = $_POST['usuario'];
+?>
+
+
+<div class="box-cols">
+    <div class="box box-col">
+        <div class="headlines">
+            <h2><span>Detalhes do Usu&aacute;rio</span></h2>
+        </div>
+        <div class="box-content">
+            <form class="formBox" method="post" action="/admin/usuarios/excluir/<?php echo $dadosUser['id']; ?>">
+                <fieldset>
+                    <div class="clearfix">
+                        <div class="lab"><label for="nome-col">Nome</label></div>
+                        <div class="con"><?php echo $dadosUser['nome']; ?></div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="lab"><label for=email-col">Email</label></div>
+                        <div class="con"><?php echo $dadosUser['email']; ?></div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="lab"><label for="nome-col">Login</label></div>
+                        <div class="con"><?php echo $dadosUser['login']; ?></div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="lab"><label for="nome-col">Senha</label></div>
+                        <div class="con">********</div>
+                    </div>
+
+                    <?php if(getID() >0){ ?>
+                    <div class="btn-submit"><!-- Submit form -->
+                        <input type="submit" value="Excluir" class="button" />
+                        ou <a href="/admin/usuarios/index/" class="cancel">Cancelar</a>
+                    </div>
+                    <?php }?>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+body {
+    font-size: 14px;;
+}
+
+#header {
+    background: url("/App/assets/img/1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    width: 100%;
+    min-height: 600px;
+}
+
+#header-internas{
+    margin-top: 130px;
+}
+
+#navigation {
+    width: 100%;
+    min-height: 80px;;
+    background: #000000;
+    opacity: 0.9;
+}
+
+#brand, #bs-navbar-collapse {
+    padding: 1em 0;
+}
+
+.footer {
+    background: url("/App/assets/img/2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    width: 100%;
+    min-height: 10em;
+    margin-top: 25px;
+}
+
+.footer .titulo {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.footer .p {
+    color: white;
+}
+
+.footer .smal {
+    color: white;
+}
+
+.navbar .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #5387AD;
+    background-color: #F5F5F5;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+
+.container-alert{
+    margin-bottom: 350px;
+}
+
+.login-menu{
+    /*background-color: gold;*/
+    color: #ffff00;
+}

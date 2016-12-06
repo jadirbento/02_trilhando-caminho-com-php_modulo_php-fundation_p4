@@ -1,0 +1,50 @@
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="home"><a href="/admin/">Admin</a></li>
+        <li><a href="/admin/paginas/index/">P&aacute;ginas</a></li>
+        <li>Detalhes</li>
+    </ul>
+</div>
+<!-- /breadcrumbs -->
+
+
+
+<?php
+    #print_r($_POST['pagina']);
+    $dadosPage = $_POST['pagina'];
+?>
+
+
+<div class="box-cols">
+    <div class="box box-col">
+        <div class="headlines">
+            <h2><span>Detalhes da P&aacute;gina</span></h2>
+        </div>
+        <div class="box-content">
+            <form class="formBox" method="post" action="/admin/paginas/excluir/<?php echo $dadosPage['id']; ?>">
+                <fieldset>
+                    <div class="clearfix">
+                        <div class="lab"><label for="nome-col">Titulo</label></div>
+                        <div class="con"><?php echo $dadosPage['titulo']; ?></div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="lab"><label for=email-col">Slug</label></div>
+                        <div class="con"><?php echo $dadosPage['slug']; ?></div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="lab"><label for="nome-col">Texto</label></div>
+                        <div class="con" style="overflow: auto; height: 350px;"><?php echo $dadosPage['texto']; ?></div>
+                    </div>
+
+                    <?php if(getID() >0){ ?>
+                    <div class="btn-submit"><!-- Submit form -->
+                        <input type="submit" value="Excluir" class="button" />
+                        ou <a href="/admin/paginas/index/" class="cancel">Cancelar</a>
+                    </div>
+                    <?php }?>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

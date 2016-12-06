@@ -1,0 +1,54 @@
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="home"><a href="/admin/">Admin</a></li>
+        <li><a href="/admin/usuarios/index/">Usu&aacute;rio</a></li>
+        <li>Atualizar</li>
+    </ul>
+</div>
+<!-- /breadcrumbs -->
+
+
+<?php
+#print_r($_POST['usuario']);
+$dadosUser = $_POST['usuario'];
+?>
+
+
+
+<div class="box-cols">
+    <div class="box box-col">
+        <div class="headlines">
+            <h2><span>Atualizar Dados do Usu&aacute;rio</span></h2>
+        </div>
+        <div class="box-content">
+            <form class="formBox" method="post" action="/admin/usuarios/atualizar/<?php echo $dadosUser['id']; ?>">
+                <input type="hidden" value="<?php echo $dadosUser['id']; ?>" name="id" id="id" />
+
+                <fieldset>
+                    <div class="clearfix">
+                        <div class="lab"><label for="nome-col">Nome</label></div>
+                        <div class="con"><input type="text" class="input" value="<?php echo $dadosUser['nome']; ?>" name="nome" id="nome" /></div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="lab"><label for=email-col">Email</label></div>
+                        <div class="con"><input type="text" class="input" value="<?php echo $dadosUser['email']; ?>" name="email" id="email" /></div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="lab"><label for="nome-col">Login</label></div>
+                        <div class="con"><input type="text" class="input" value="<?php echo $dadosUser['login']; ?>" name="login" id="login" /></div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="lab"><label for="nome-col">Senha</label></div>
+                        <div class="con"><input type="password" class="input" value="" name="senha" id="senha" /></div>
+                    </div>
+
+                    <div class="btn-submit"><!-- Submit form -->
+                        <input type="submit" value="Atualizar" class="button" />
+                        ou <a href="/admin/usuarios/index/" class="cancel">Cancelar</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

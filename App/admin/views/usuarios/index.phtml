@@ -1,0 +1,91 @@
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="home"><a href="">Admin</a></li>
+        <li><a href="">Usu&aacute;rio</a></li>
+        <li>Home</li>
+    </ul>
+</div>
+<!-- /breadcrumbs -->
+
+
+
+<?php
+    //echo $_GET['mensagem'];
+
+    if($_GET['mensagem'] >0){
+        require_once('App/admin/views/message/index.phtml');
+    }
+?>
+
+
+
+
+<!-- box -->
+<div class="box">
+    <div class="headlines">
+        <h2><span>Usu&aacute;rios</span></h2>
+        <a href="#" class="show-filter">mostrar filtro</a>
+    </div>
+    <!-- filter -->
+    <form action="/admin/usuarios/filtro/" method="GET" id="filtro">
+        <div class="filter">
+            <input type="text" id="nome" name="nome" value="" placeholder="nome" class="input" />
+            <input type="text" id="email" name="email" value="" placeholder="email" class="input" />
+            <input type="text" id="login" name="login" value="" placeholder="login" class="input" />
+            <input type="submit" value="filtrar" class="submit" />
+        </div>
+    </form>
+    <!-- /filter -->
+
+    <!-- table -->
+    <table class="tab tab-drag">
+        <tr class="top nodrop nodrag">
+            <th class="dragHandle">&nbsp;</th>
+            <th class="checkbox"><input type="checkbox" name="" value="" class="check-all" /></th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th class="action">Action</th>
+        </tr>
+
+        <?php foreach($_POST['usuarios'] as $user){ ?>
+            <tr>
+                <td class="dragHandle">&nbsp;</td>
+                <td class="checkbox"><input type="checkbox" name="" value="" /></td>
+                <td><a href="/admin/usuarios/detalhes/<?php echo $user['id']; ?>"> <?php echo $user['nome']; ?> </a></td>
+                <td><?php echo $user['email']; ?></td>
+                <td class="action">
+                    <a href="/admin/usuarios/excluir/<?php echo $user['id']; ?>" class="ico ico-delete">Delete</a>
+                    <a href="/admin/usuarios/atualizar/<?php echo $user['id']; ?>" class="ico ico-edit">Edit</a>
+                </td>
+            </tr>
+        <?php } ?>
+    </table>
+    <!-- /table -->
+
+    <!-- box-action -->
+    <div class="tab-action">
+        <a href="/admin/usuarios/cadastrar" class="submit">Adicionar Novo</a>
+    </div>
+    <!-- /box-action -->
+    <br><br><br><br>
+    <!-- /pagination -->
+    <div class="pagination">
+        <!--
+        <ul>
+            <li class="graphic first"><a href=""></a></li>
+            <li class="graphic prev"><a href=""></a></li>
+            <li><a href="">1</a></li>
+            <li class="active"><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li class="graphic next"><a href=""></a></li>
+            <li class="graphic last"><a href=""></a></li>
+        </ul>
+        <p>Pages 1 of 5</p>
+        -->
+    </div>
+    <!-- /pagination -->
+</div>
+<!-- /box -->

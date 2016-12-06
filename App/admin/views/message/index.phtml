@@ -1,0 +1,53 @@
+
+<?php //echo $_GET['mensagem']; ?>
+
+<!-- Error  -->
+<?php if($_GET['mensagem'] == 1){ ?>
+    <div class="form-message error">
+        <p>Erro na resposta do servidor:</p>
+        <ul>
+            <li>Sua requisi&ccedil;&atilde;o n&atilde;o foi processada corretamente.</li>
+            <li>Contate o administrador do sistema.</li>
+        </ul>
+    </div>
+<?php } ?>
+
+
+<!-- Success -->
+<?php if($_GET['mensagem'] == 2){ ?>
+    <div class="form-message correct">
+        <p>Sucesso:</p>
+        <ul>
+            <li>Sua solicita&ccedil;&atilde;o foi processada com sucesso!</li>
+        </ul>
+    </div>
+<?php } ?>
+
+
+<!-- Warning  -->
+<?php if($_GET['mensagem'] == 3){ ?>
+    <div class="form-message warning">
+        <p>Aviso:</p>
+        <ul>
+            <li>Sua solicita&ccedil;&atilde;o, Parte ou toda, n&atilde;o foi processada corretamente.</li>
+            <li>Verifique os resultados.</li>
+        </ul>
+    </div>
+<?php } ?>
+
+
+
+
+
+
+
+
+<!-- Mensagem Personalizada  -->
+<?php if($_GET['mensagem'] == 100){ ?>
+    <div class="form-message warning">
+        <p>Aviso:</p>
+        <ul>
+            <?php echo $_SESSION['msgText']; ?>
+        </ul>
+    </div>
+<?php } ?>
