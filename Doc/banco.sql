@@ -35,7 +35,7 @@ DELIMITER ;
 
 
 #teste
-select func_valida_usuario('admin','admin') as Validou
+select func_valida_usuario('admin','admin') as Validou;
 
 
 
@@ -189,7 +189,7 @@ INSERT INTO paginas(titulo, slug, texto, criado) VALUES
         os
         tombis que eu levo! Diuretics paradis num copo &eacute; motivis de denguis.&nbsp;</p>
 ', NOW()),
-('SERVIÇOS', 'servicos', '
+('SERVIï¿½OS', 'servicos', '
 <p>Um ambiente visualmente harmonioso &eacute; capaz de despertar os melhores sentimentos. Nossos projetos levam esse conceito para o seu evento, usando cores e formas para inserir seus convidados em uma atmosfera &uacute;nica, inesquec&iacute;vel e principalmente, muito confort&aacute;vel. Abaixo relacionamos alguns tipos de servi&ccedil;os de decora&ccedil;&atilde;o e ambienta&ccedil;&atilde;o:Anivers&aacute;rios, Formaturas, Bodas, 15 Anos, Casamentos, Coquetel, Eventos empresariais, Coffe-break, Jantares, Ch&aacute;/Bar entre outros. Temos uma equipe treinada e altamente qualificada que est&aacute; pronta para a montagem do seu projeto. Um servi&ccedil;o que oferece suporte total desde a etapa criativa at&eacute; a montagem final para a realiza&ccedil;&atilde;o do seu evento.</p>
 
 	<p>Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium dia nois paga. in elementis m&eacute;
